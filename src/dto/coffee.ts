@@ -13,10 +13,12 @@ export type CoffeeBeanType = {
   favourite: boolean;
   type: 'Coffee' | 'Bean';
   index: number;
+  itemPrice: string;
 };
 
 export type CoffeePriceType = {
   size: string;
   price: string;
   currency: string;
+  quantity: number;
 };
