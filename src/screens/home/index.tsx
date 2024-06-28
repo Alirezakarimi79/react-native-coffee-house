@@ -163,7 +163,14 @@ export const HomeScreen: FC<{navigation: any}> = ({navigation}) => {
           ref={coffeeFlatListRef}
           data={sortedCoffee}
           renderItem={({item}) => (
-            <TouchableOpacity onPress={() => navigation.push('Details')}>
+            <TouchableOpacity
+              onPress={() =>
+                navigation.push('Details', {
+                  index: item.index,
+                  id: item.id,
+                  type: item.type,
+                })
+              }>
               <CoffeeCard coffee={item} buttonPressHandler={() => {}} />
             </TouchableOpacity>
           )}
@@ -178,7 +185,14 @@ export const HomeScreen: FC<{navigation: any}> = ({navigation}) => {
         <FlatList
           data={beanList}
           renderItem={({item}) => (
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() =>
+                navigation.push('Details', {
+                  index: item.index,
+                  id: item.id,
+                  type: item.type,
+                })
+              }>
               <CoffeeCard coffee={item} buttonPressHandler={() => {}} />
             </TouchableOpacity>
           )}

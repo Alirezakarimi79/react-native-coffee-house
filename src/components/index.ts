@@ -4,3 +4,4 @@ export * from './header-bar';
 export * from './profile-pic';
 export * from './gradient-bg-icon';
 export * from './coffee-card';
+export * from './image-background-info';

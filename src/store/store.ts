@@ -19,7 +19,7 @@ interface IZustand {
   DeleteFromFavoriteList: (type: 'Coffee' | 'Bean', id: string) => void;
 }
 
-const useStore = create(
+export const useStore = create(
   persist<IZustand>(
     (set, get) => ({
       CoffeeList: CoffeeData,
@@ -160,5 +160,3 @@ const useStore = create(
     },
   ),
 );
-
-export default useStore;
